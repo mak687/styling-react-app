@@ -4,7 +4,7 @@ import styles from './../css/ProductCard.module.css';
 const ProductCard = ({ product }) => {
   const { name, price, description, image, category, rating } = product;
 
-  // Dynamic background color based on category
+  
   const categoryBackground = category === 'Electronics' ? 'bg-light' : category === 'Clothing' ? 'bg-success' : 'bg-info';
 
   return (
@@ -21,7 +21,7 @@ const ProductCard = ({ product }) => {
           {Array(rating)
             .fill()
             .map((_, index) => (
-              <span key={index} className="text-warning">&#9733;</span> // Star for rating
+              <span key={index} className="text-warning">&#9733;</span> 
             ))}
         </div>
       </div>
